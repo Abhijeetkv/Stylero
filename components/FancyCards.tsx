@@ -3,7 +3,7 @@ import React from 'react'
 
 const FancyCards = () => {
   return (
-    <View>
+    <View style={styles.box}>
       <Text style= {styles.headingText}>Anime</Text>
       <View style={[styles.card, styles.cardElevated]}>
         <Image 
@@ -33,15 +33,18 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         paddingHorizontal: 8,
     },
+    box: {
+        margin: 10
+    },
     card: {
         width: "100%",
         height: 360,
         borderRadius: 8,
         marginVertical: 12,
-        margin: 5
+        padding: 10
     },
     cardElevated: {
-        backgroundColor: 'white',
+        backgroundColor: 'violet',
         elevation: 5,
         shadowOffset: {
             width: 1,
