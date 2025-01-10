@@ -73,9 +73,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   container: {
-    margin: 10,
-    padding: 10,
-    backgroundColor: 'lightgray',
+    margin: 6,
     borderRadius: 10,
     marginBottom: 4
   },
@@ -87,6 +85,7 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 10,
     marginBottom: 4,
+    backgroundColor: '#8D3DAF'
   },
   userImage: {
     width: 60,
