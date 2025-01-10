@@ -10,7 +10,7 @@ export default function ActionCard() {
       <Text style={styles.headingText}>Blog Card</Text>
       <View style={[styles.card, styles.cardElevated]}>
             <View style={styles.headingContainer}>
-                <Text style={styles.headingText}>
+                <Text style={styles.headerText}>
                     What's new in javascript 21 - ES12
                 </Text>
             </View>
@@ -28,11 +28,13 @@ export default function ActionCard() {
             </View>
             <View style={styles.footerContainer}>
                 <TouchableOpacity
+                style={styles.socialLinks}
                 onPress={() => openWebsite('https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2021')}
                 >
                     <Text>Read more</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
+                style={styles.socialLinks}
                 onPress={() => openWebsite('https://github.com/Abhijeetkv')}
                 >
                     <Text>Follow Me mf's</Text>
@@ -52,25 +54,38 @@ const styles = StyleSheet.create({
     },
     card: {
         width: "100%",
-        height: 360,
+        height: 380,
         borderRadius: 8,
         marginVertical: 12,
-        margin: 5
+        margin: 5,
     },
+    headerText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        
+    },
+
     cardElevated: {
         backgroundColor: 'white',
-        elevation: 5,
+        elevation: 3,
         shadowOffset: {
             width: 1,
             height: 1,
         },
+        shadowColor: '#333',
+        shadowOpacity: 0.4
     },
     headingContainer: {
         padding: 12,
+        height: 44,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     cardImage: {
-        height: 180,
-        marginBottom: 8,
+        height: 190,
+        marginBottom: 16,
         borderTopLeftRadius: 6,
         borderTopRightRadius: 6,
     },
@@ -82,6 +97,15 @@ const styles = StyleSheet.create({
     },
     footerContainer: {
         padding: 12,
-        alignItems: 'flex-end'
+        flexDirection: 'row',
+        justifyContent: 'space-evenly'
+    },
+    socialLinks: {
+        fontSize: 16,
+        color: '000000',
+        backgroundColor: "blue",
+        paddingHorizontal: 20,
+        paddingVertical: 8,
+        borderRadius: 6
     }
 })
