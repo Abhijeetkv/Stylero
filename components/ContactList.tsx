@@ -41,6 +41,7 @@ export default function ContactList() {
           },
           
         ];
+        
   return (
     <View>
       <Text style={styles.headingText}>ContactList</Text>
